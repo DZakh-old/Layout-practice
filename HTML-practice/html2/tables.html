@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tables</title>
+	<style>
+		section {
+			width: 1000px;
+		}
+		section > table {
+			width:100%;
+		}
+		table table {
+			margin: 40px auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>Таблицы</h1>
+	<section id="table1">
+		<h2>Таблица номер 1</h2>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Столбец 1</th>
+					<th>Столбец 2</th>
+					<th>Столбец 3</th>
+					<th>Столбец 4</th>
+					<th>Столбец 5</th>
+					<th>Столбец 6</th>
+					<th>Столбец 7</th>
+					<th>Столбец 8</th>
+					<th>Столбец 9</th>
+					<th>Столбец 10</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+				</tr>
+				<tr>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+				</tr>
+				<tr>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+					<td>Данные</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<section id="table2">
+		<h2>Таблица номер 2</h2>
+		<table border="1">
+			<tr>
+				<td>
+					<table border="1">
+						<thead>
+							<tr>
+								<th>Столбец 1</th>
+								<th>Столбец 2</th>
+								<th>Столбец 3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+					<table border="1">
+						<thead>
+							<tr>
+								<th>Столбец 1</th>
+								<th>Столбец 2</th>
+								<th>Столбец 3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+							<tr>
+								<td>Данные</td>
+								<td>Данные</td>
+								<td>Данные</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<section id="form">
+		<h2>Форма</h2>
+		<form action="#" method="POST">
+			<input type="text" name="user" placeholder="Имя" required="">
+			<br>
+			<input type="mail" name="mail" placeholder="E-mail" required="">
+			<br>
+			<input type="tel" name="tel" placeholder="Телефон" required="">
+			<br>
+			<p>Do you want a ship</p>
+			<input type="radio" id="yes" name="ship" required="">
+			<label for="yes">Yes</label>
+			<input type="radio" id="no" name="ship" required="">
+			<label for="no">No</label>
+			<br>
+			<p>Choose additionals</p>
+			<input type="checkbox" id="box" name="adds">
+			<label for="box">Box</label>
+			<input type="checkbox" id="present" name="adds">
+			<label for="present">Present view</label>
+			<br>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<br>
+			<input type="submit" value="Отправить">
+		</form>
+	</section>
+</body>
+</html>
