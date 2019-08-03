@@ -1,4 +1,0 @@
-	Дополнительные ссылки
-	https://validator.w3.org/
-	https://web-standards.ru/articles/avoiding-html5-mistakes/
-	http://front-end.su/2015/11/01/div-or-section-or-article/
