@@ -7,7 +7,7 @@ body {
 	font-family: arial, tahoma, sans-serif;
 	font-size: 15px;
 	line-height: 22px;
-	min-width: 1100px;
+	min-width: 1160px;
 }
 .container {
 	width: 100%;
@@ -74,11 +74,10 @@ h1 {
 	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
-	margin: 0 -30px 50px -30px;
+	margin-bottom: 50px;
 }
 .articles-wrap article {
-	max-width: 358px;
-	margin: 0 30px;
+	width: 358px;
 	padding: 30px;
 }
 #em-art-box1 {
@@ -86,6 +85,7 @@ h1 {
 }
 #em-art-box2 {
 	border: 5px solid #d6d6d6;
+	margin: 0 20px;
 }
 #em-art-box3 {
 	border: 5px solid white;
@@ -156,8 +156,7 @@ form p {
 * --- BLUE CARD ---
 */
 .blue-card-wrap {
-	min-height: 100px;
-	max-width: 770px;
+	min-width: 770px;
 	color: #c0ddee;
 	background: #184c6b;
 	border-radius: 10px;
