@@ -8,6 +8,7 @@
 	<!-- Style -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/24110dbf81.js"></script>
 </head>
 <body class="page">
 	<nav class="navPanel">
@@ -35,23 +36,33 @@
 			<addres class="telephone telephone_color telephone_color_purple navPanel__telephone">
 				<a href="#" class="telephone__number">+7 (495) 544-23-12</a>
 				<a href="#" class="telephone__callRequest">
-					<svg class="telephone__icon" x="0px" y="0px" viewBox="0 0 446.081 446.081" height="11">
-						<path d="M444.413,339.307c-1.034-2.006-25.84-49.156-94.512-65.815c-4.773-1.246-9.697,0.03-13.376,3.192c-21.675,18.452-51.618,38.243-64.538,40.218c-86.639-42.346-134.974-123.604-136.798-139.017c-1.064-8.664,18.787-39.094,41.617-63.839c2.888-3.131,4.347-7.387,3.952-11.643c-5.806-66.788-75.482-99.558-78.431-100.896c-2.797-1.277-5.897-1.672-8.877-1.155C13.015,13.698,0.916,60.513,0.429,62.459c-0.669,2.736-0.547,5.563,0.304,8.208c95.941,297.672,295.331,352.847,360.903,371.056l12.312,3.557l4.682,0.669l6.293-1.368c2.006-0.912,49.369-23.225,60.951-96.002C446.42,345.448,445.873,342.164,444.413,339.307z"/>
-					</svg>
-					<span class="telephone__text">Заказать звонок</span>
+					<i class="fas fa-phone-alt telephone__icon"></i>
+					Заказать звонок
 				</a>
 			</addres>
 		</div>
 	</nav>
-	<header class="header">
-		<img class="header__background" src="images/first-screen-bg.jpg" alt="Frist screen background">
-		<div class="header__offer">
-			<p class="header__text_up"><strong>Дом готов</strong>, идёт внутренняя отделка. Срок сдачи: <strong>Февраль 2016</strong></p>
-			<h1 class="header__heading">Ваша квартира в новострое ждет вас</h1>
-			<p class="header__text_down">Уютные квартиры в центре города и в <strong>5 минутах от р. Волга</strong></p>
+	<header class="banner">
+		<img class="banner__background" src="images/first-screen-bg.jpg" alt="Frist screen background">
+		<div class="offer">
+			<p class="offer__text_up"><strong>Дом готов</strong>, идёт внутренняя отделка. Срок сдачи: <strong>Февраль 2016</strong></p>
+			<h1 class="offer__heading">Ваша квартира в новострое ждет вас</h1>
+			<p class="offer__text_down">Уютные квартиры в центре города и в <strong>5 минутах от р. Волга</strong></p>
 		</div>
+		<form action="#" method="post" class="appointment">
+			<h2 class="appointment__heading">Запишитесь на просмотр прямо сейчас!</h2>
+			<h3 class="appointment__caption">Покажем Вам квартиры в удобное для Вас время</h3>
+			<div class="appointment__data">
+				<i class="fas fa-user appointment__icon"></i>
+				<input type="text" name="name" class="appointment__input" placeholder="Имя">
+				<i class="fas fa-phone-alt appointment__icon"></i>
+				<input type="tel" name="tel" class="appointment__input" placeholder="Телефон">
+				<input type="submit" value="Записаться на просмотр!" class="appointment__input appointment__input_submit">
+			</div>
+			<p class="appointment__notification">Осталось всего <span class="appointment__appartments">5</span> квартир!</p>
+		</form>
 	</header>
-
+	
 	<div class="second">
 		
 	</div>

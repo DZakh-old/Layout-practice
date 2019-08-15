@@ -2,6 +2,8 @@
 	--main-green-color: #2b992b;
 	--yellow-color: #fddc7c;
 	--purple-color: #2f1059;
+	--second-purple-color: #7925ec;
+	--soft-purple-color: #e8def5;
 	--nav-height: 100px;
 }
 * {
@@ -20,7 +22,7 @@ a {
 	color: black;
 	background: var(--yellow-color);
 	min-width: 1270px;
-	letter-spacing: -0.9px;
+	letter-spacing: 0.5px;
 }
 
 
@@ -34,10 +36,6 @@ a {
 * --- NAVIGATION ---
 */
 .navPanel {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
 	height: var(--nav-height);
 	background: white;
 }
@@ -57,7 +55,7 @@ a {
 
 
 /*
-* --- MENU ---
+* --- menu ---
 */
 .menu {
 	display: -webkit-flex;
@@ -69,6 +67,7 @@ a {
 	list-style: none;
 	width: 705px;
 	font-weight: bold;
+	letter-spacing: -0.9px;
 }
 .menu__link {
 	padding: 9px 10px 11px 10px;
@@ -83,7 +82,7 @@ a {
 
 
 /*
-* --- TELEPHONE ---
+* --- telephone ---
 */
 .telephone {
 	font-weight: bold;
@@ -102,7 +101,6 @@ a {
 }
 .telephone__number {
 	display: inline-block;
-	letter-spacing: 0px;
 	font-size: 21px;
 	line-height: 21px;
 	margin-bottom: 8px;
@@ -119,23 +117,21 @@ a {
 	border: 1px solid var(--tel-main-color);
 	border-radius: 5px;
 	padding-left: 20px;
-	line-height: 16px;
-	padding: 11px 5px 13px 10px;
+	line-height: 14px;
+	padding: 12px 5px 14px 10px;
 	margin-left: auto;
-	fill: var(--tel-main-color);
 }
 .telephone__callRequest:hover {
 	background-color: var(--tel-main-color);
 	color: var(--tel-2nd-color);
-	fill: var(--tel-2nd-color);
 }
 .telephone__callRequest:active {
 	background-color: var(--tel-2nd-color);
 	color: var(--tel-main-color);
-	fill: var(--tel-main-color);
 }
-.telephone__text {
-	margin-left: 3px;
+.telephone__icon {
+	font-size: 12px;
+	vertical-align: middle;
 }
 
 .telephone_color_purple {
@@ -148,45 +144,161 @@ a {
 }*/
 
 
-
-
-
-
-.icon-bike {
-  mask: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/icon-bike-black.svg);
+/*
+* --- BANNER ---
+*/
+.banner {
+	position: relative;
+	height: calc(100vh - 100px);
+	min-height: 540px;
 }
-.icon-bell {
-  mask: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/icon-bell-black.svg);
+.banner:after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	content: "";
+	display: block;
+	height: 63px;
+	background: white;
 }
-.icon-arrow {
-  -webkit-mask: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/icon-arrow-black.svg);
-}
-.icon {
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  background: black;
-  -webkit-mask-size: cover;
-}
-.icon:hover,
-.icon:focus {
-  background: red;
+.banner__background {
+	background: var(--yellow-color);
+	position: absolute;
+	z-index: -1;
+	object-fit: cover;
+	width: 100%;
+	height: calc(100% - 63px);
 }
 
 
+/*
+* --- offer ---
+*/
+.offer {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	left: 0;
+	background: url(../images/heading__offer-bg.png) calc(50% + 10px) center no-repeat;
+	text-align: center;
+	color: var(--purple-color);
+}
+.offer__text_up {
+	font-size: 22px;
+	margin-top: 40px;
+	margin-bottom: 9px;
+}
+.offer__heading {
+	font-size: 43px;
+	text-transform: uppercase;
+}
+.offer__text_down {
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+
+/*
+* --- appointment ---
+*/
+.appointment {
+	position: absolute;
+	right: 0;
+	bottom: -35px;
+	left: 0;
+	padding: 70px;
+	margin: auto;
+	width: 920px;
+	height: 378px;
+	background: url(../images/appointment-bg.png) center center no-repeat;
+	text-align: center;
+	color: white;
+}
+.appointment__heading {
+	margin-top: 27px;
+	margin-bottom: 3px;
+	font-size: 24px;
+}
+.appointment__caption {
+	font-size: 17px;
+	font-weight: normal;
+}
+.appointment__data {
+	margin-top: 18px;
+	font-size: 16px;
+	color: #7e7985;
+}
+.appointment__icon {
+	position: absolute;
+	margin: 18px 0 0 30px;
+	font-size: 14px;
+}
+.appointment__input {
+	height: 52px;
+	width: 200px;
+	padding-left: 47px;
+	border: none;
+	border-radius: 5px;
+	margin: 0 2px;
+	background: var(--soft-purple-color);
+	outline: none;
+}
+.appointment__input::placeholder {
+	font-size: 16px;
+	color: #7e7985;
+	font-family: 'Roboto Slab', serif;
+	vertical-align: middle;
+}
+.appointment__input:focus { 
+  background-color: white;
+}
+.appointment__input_submit {
+	font-family: 'Roboto Slab', serif;
+	height: 52px;
+	background: #d22828;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+	width: 275px;
+	vertical-align: middle;
+	padding-left: 0;
+	padding-bottom: 4px;
+}
+.appointment__input_submit:hover {
+	background: #ea2d2d;
+	cursor: pointer;
+}
+.appointment__input_submit:active {
+	padding-left: 0;
+	padding-bottom: 7px;
+}
+.appointment__notification {
+	color: var(--second-purple-color);
+	font-weight: lighter;
+	margin-top: 42px;
+	font-size: 15.3px;
+}
+.appointment__appartments {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	font-size: 20.7px;
+	line-height: 22px;
+	font-weight: bold;
+	border: 1px solid var(--second-purple-color);
+	border-radius: 3px;
+}
 
 
 
 
 
-
-.header {
+.second {
 	height: 100vh;
-	
+
 }
-
-
-
 
 
 
@@ -252,13 +364,13 @@ a {
 }
 
 
-.header {
+.banner {
 	height: 100vh;
 	min-height: 350px;
 	max-height: 1080px;
 	background-color: var(--blue-color);
 }
-.header__inner {
+.banner__inner {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -270,52 +382,52 @@ a {
 	-o-flex-direction: column;
 	flex-direction: column;
 }
-.header__inner > * {
+.banner__inner > * {
 	margin: auto;
 }
-.header__logoWrap {
+.banner__logoWrap {
 	margin-top: 53px;
 	display: inline;
 }
-.header__img_logo {
+.banner__img_logo {
 	height: 32px;
 }
-.header__img_interactive {
+.banner__img_interactive {
 	height: 18px;
 	margin-top: 3px;
 }
-.header__img_interactive:hover {
+.banner__img_interactive:hover {
 	height: 20px;
 }
-.header__img_interactive:active {
+.banner__img_interactive:active {
 	margin-top: 0;
 }
-.header__offer {
+.banner__offer {
 	height: calc(100vh - 165px);
 	min-height: 185px;
 	max-height: 905px;
 	text-align: center;
 }
-.header__heading {
+.banner__heading {
 	font-size: 1.63em;
 	color: white;
 	margin: 0 170px;
 }
-.header__heading:before {
+.banner__heading:before {
 	content: '';
 	display: block;
 	height: calc(50vh - 165px);
 	min-height: 10px;
 	max-height: 375px;
 }
-.header__contactBtn {
+.banner__contactBtn {
 	margin-top: 30px;
 }
-.header__contactBtn:hover {
+.banner__contactBtn:hover {
 	background-color: white;
 	color: var(--blue-color);
 }
-.header__contactBtn:active {
+.banner__contactBtn:active {
 	color: white;
 }
 
