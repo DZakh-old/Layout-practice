@@ -172,7 +172,6 @@ a {
 	height: calc(100% - 63px);
 }
 
-
 /*
 * --- offer ---
 */
@@ -181,7 +180,7 @@ a {
 	top: 30px;
 	right: 0;
 	left: 0;
-	background: url(../images/heading__offer-bg.png) calc(50% + 10px) center no-repeat;
+	background: url(../images/offer-bg.png) calc(50% + 10px) center no-repeat;
 	text-align: center;
 	color: var(--purple-color);
 }
@@ -232,13 +231,17 @@ a {
 }
 .appointment__icon {
 	position: absolute;
-	margin: 18px 0 0 30px;
+	margin: 18px 0 0 32px;
 	font-size: 14px;
+	pointer-events: none;
+	z-index: 2;
 }
 .appointment__input {
+	position: relative;
+	z-index: 3;
 	height: 52px;
 	width: 200px;
-	padding-left: 47px;
+	padding-left: 27px;
 	border: none;
 	border-radius: 5px;
 	margin: 0 2px;
@@ -250,6 +253,9 @@ a {
 	color: #7e7985;
 	font-family: 'Roboto Slab', serif;
 	vertical-align: middle;
+}
+.appointment__input:placeholder-shown {
+	z-index: 1;
 }
 .appointment__input:focus { 
   background-color: white;
@@ -292,6 +298,53 @@ a {
 }
 
 
+/*
+* --- ADVATAGES ---
+*/
+.advantages {
+	background: white;
+}
+.advantages__inner {
+	padding: 13px 42px;
+}
+.advantages__list {
+	list-style: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.advantages__item {
+	background: url(../images/element-bg.png) center center no-repeat;
+	width: 152px;
+	height: 152px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.advantages__item_position_left {
+	margin-top: 120px;
+}
+.advantages__item_position_middle{
+	margin-top: 52px;
+}
+.advantages__item_position_right {
+	margin-top: 130px;
+}
+.advantages__text {
+	margin-left: 4px;
+	text-align: center;
+	font-size: 17px;
+	letter-spacing: -0.7px;
+	color: var(--purple-color);
+}
+
 
 
 
@@ -299,6 +352,12 @@ a {
 	height: 100vh;
 
 }
+
+
+
+
+
+
 
 
 
