@@ -1,5 +1,6 @@
 :root {
 	--main-green-color: #2b992b;
+	--light-green-color: #f2fff2;
 	--yellow-color: #fddc7c;
 	--purple-color: #2f1059;
 	--second-purple-color: #7925ec;
@@ -43,6 +44,13 @@ a {
 .em-mt7 {
 	margin-top: 7px;
 }
+.em-ml31 {
+	margin-left: 31px;
+}
+.em-ml44 {
+	margin-left: 44px;
+}
+
 
 /*
 * --- NAVIGATION ---
@@ -437,6 +445,118 @@ a {
 	font-size: 15px;
 	font-weight: lighter;
 }
+
+
+/*
+* --- INFRASTRUCTURE ---
+*/
+.infrastructure {
+	background: var(--light-green-color) url(../images/infrastructure-bg.png) center 100% repeat-x;
+	position: relative;
+}
+.infrastructure:after {
+	content: "";
+	display: block;
+	margin-top: 105px;
+	height: 10px;
+	background: white;
+}
+.infrastructure__heading {
+	padding-top: 70px;
+	text-align: center;
+}
+
+/*
+* --- facilities ---
+*/
+.facilities {
+	padding-top: 50px;
+	padding-bottom: 80px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
+}
+.facilities__element {
+	width: 345px;
+}
+.facilities__list {
+	list-style: none;
+}
+.facilities__heading {
+	font-size: 19px;
+	padding-bottom: 50px;
+	position: relative;
+}
+.facilities__heading:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background: url(../images/facility-heading-bg.png) 100% 0 no-repeat;
+	margin-top: 15px;
+	left: -30px;
+	width: 336px;
+	height: 37px;
+}
+.facilities__item {
+	height: 35px;
+	line-height: 34px;
+	font-size: 16px;
+	font-weight: lighter;
+	white-space: nowrap;
+	border-bottom: 1px solid #c8d9c8;
+}
+
+/*
+* --- summary ---
+*/
+.summary {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 115px;
+	background: url(../images/summary-bg.png) center center repeat-x;
+	background-size: auto 100%;
+}
+.summary__inner {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+.summary__element {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.summary__text {
+	color: white;
+	padding-left: 20px;
+	font-size: 17px;
+	white-space: nowrap;
+}
+.summary__caption {
+	font-weight: lighter;
+}
+
+
+
+
+
+
+
 
 
 
