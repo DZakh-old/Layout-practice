@@ -1,0 +1,250 @@
+/*
+* --- SECTION ---
+*/
+.about-me {
+	padding-top: 87px;
+}
+
+/*
+* --- Content grid ---
+*/
+.about-me__content {
+	margin-top: 73px;
+	display: grid;
+ 	grid-template-columns: 1fr 1fr;
+ 	grid-template-rows: auto 1fr;
+ 	grid-gap: 20px;
+ 	grid-auto-flow: column;
+}
+/*.about-me__content > * {
+	background: pink;
+}*/
+.about-me__bg-info {
+	grid-row-start: 1;
+	grid-row-end:   3;
+}
+
+/*
+* --- BACKGROUND ---
+*/
+.bg-info__content {
+	padding-right: 15px;
+}
+.bg-info__text {
+	font-size: 15px;
+	margin-bottom: 37px;
+	letter-spacing: 0.5px;
+	line-height: 24px;
+}
+
+/*
+* --- MERITS ---
+*/
+.merits__list {
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
+.merits__item {
+	width: 140px;
+	text-align: center;
+}
+.merits__number {
+	position: relative;
+	margin: auto;
+	font-size: 20px;
+	color: var(--green-color);
+	line-height: 102px;
+	font-weight: 100;
+	height: 102px;
+	width: 102px;
+}
+.merits__number:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	height: 58px;
+	width: 58px;
+	border: 1px solid var(--light-green-color);
+	outline: 1px solid var(--green-color);
+	outline-offset: 7px;
+	transform-origin: 50% 50%;
+	transform: rotate(45deg);
+	-webkit-transition: transform 2s;
+	-moz-transition: transform 2s;
+	-ms-transition: transform 2s;
+	-o-transition: transform 2s;
+	transition: transform 2s;
+}
+.merits__number:hover:after {
+	transform: rotate(405deg);
+}
+.merits__point {
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 27px;
+}
+
+/*
+* --- CONNECTION ---
+*/
+.connection__heading {
+	margin-top: 47px;
+	margin-bottom: 40px;
+}
+.connection__content {
+	font-size: 14px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+}
+.connection__references {
+	list-style: none;
+}
+.connection__item {
+	margin-bottom: 17px;
+}
+.connection__link {
+	position: relative;
+	color: var(--green-color);
+}
+.underline_theme_connection:after {
+	background: var(--light-green-color);
+}
+
+/*
+* --- ME OFFER ---
+*/
+.connection__me {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	margin-top: 3px;
+}
+.connection__photo {
+	border-radius: 50%;
+	height: 62px;
+	width: 62px;
+	margin-right: 20px;
+	background-color: #eef1ed;
+}
+.connection__call {
+	font-style: italic;
+	text-align: center;
+}
+
+
+/*
+* --- MEDIA QUIRES ---
+*/
+
+/* --- Middle number elem higher --- */
+@media  screen and (min-width: 590px) and (max-width: 950px),
+		screen and (min-width: 430px) and (max-width: 480px) {
+	.merits__list {
+		padding-top: 50px;
+	}
+	.merits__item:nth-child(2) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+	}
+}
+/* --- "Me" block vertical --- */
+@media 	screen and (min-width: 590px) and (max-width: 950px),
+		screen and (max-width: 480px) {
+	.connection__me {
+		margin: 0;
+		flex-direction: column;
+		width: 100%;
+	}
+	.connection__photo {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	.connection__call {
+		width: 115px;
+	}
+}
+/* --- Text block above and two other ones under its vertically --- */
+@media screen and (min-width: 590px) and (max-width: 825px) {
+	.about-me__content {
+		grid-template-columns: minmax(370px, 1fr) 1fr;
+	}	
+	.about-me__bg-info {
+		grid-row-start: 1;
+		grid-row-end:   2;
+		grid-column-start: 1;
+		grid-column-end:   3;
+	}
+	.connection__heading {
+		margin-top: 0;
+	}
+	.connection__me {
+		margin-left: 5px;
+	}
+}
+/* --- "Connection" block vertical --- */
+@media screen and (min-width: 590px) and (max-width: 715px) {
+	.about-me__connection {
+		justify-self: center;
+	}
+	.connection__content {
+		flex-direction: column;	
+	}
+	.connection__me {
+		margin-top: 15px;
+		width: auto;
+	}
+}
+/* --- Vertical --- */
+@media screen and (max-width: 590px) {
+	.about-me__content {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(auto);
+	 	grid-auto-flow: row;
+	}	
+}
+/* --- Merit's eliments vertical -- */
+@media screen and (max-width: 430px) {
+	.merits__heading {
+		margin-bottom: 10px;
+	}
+	.merits__list {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.merits__item {
+		margin: 70px auto;
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		transform: scale(1.5);
+	}
+	.connection__heading {
+		margin-top: 0;
+	}
+}
