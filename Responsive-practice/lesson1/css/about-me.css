@@ -16,9 +16,6 @@
  	grid-gap: 20px;
  	grid-auto-flow: column;
 }
-/*.about-me__content > * {
-	background: pink;
-}*/
 .about-me__bg-info {
 	grid-row-start: 1;
 	grid-row-end:   3;
@@ -80,19 +77,19 @@
 	outline-offset: 7px;
 	transform-origin: 50% 50%;
 	transform: rotate(45deg);
-	-webkit-transition: transform 2s;
-	-moz-transition: transform 2s;
-	-ms-transition: transform 2s;
-	-o-transition: transform 2s;
-	transition: transform 2s;
+	-webkit-transition: transform 0.3s;
+	-moz-transition: transform 0.3s;
+	-ms-transition: transform 0.3s;
+	-o-transition: transform 0.3s;
+	transition: transform 0.3s;
 }
 .merits__number:hover:after {
-	transform: rotate(405deg);
+	transform: rotate(35deg);
 }
-.merits__point {
+.merits__name {
 	font-size: 12px;
 	text-transform: uppercase;
-	margin-top: 27px;
+	margin-top: 23px;
 }
 
 /*
@@ -157,8 +154,9 @@
 * --- MEDIA QUIRES ---
 */
 
-/* --- Middle number elem higher --- */
-@media  screen and (min-width: 590px) and (max-width: 950px),
+/* Middle number elem higher */
+@media  screen and (min-width: 825px) and (max-width: 950px),
+		screen and (min-width: 590px) and (max-width: 725px),
 		screen and (min-width: 430px) and (max-width: 480px) {
 	.merits__list {
 		padding-top: 50px;
@@ -171,7 +169,7 @@
 		margin: 0 auto;
 	}
 }
-/* --- "Me" block vertical --- */
+/* "Me" block vertical */
 @media 	screen and (min-width: 590px) and (max-width: 950px),
 		screen and (max-width: 480px) {
 	.connection__me {
@@ -187,7 +185,7 @@
 		width: 115px;
 	}
 }
-/* --- Text block above and two other ones under its vertically --- */
+/* Text block above and two other ones under its vertically */
 @media screen and (min-width: 590px) and (max-width: 825px) {
 	.about-me__content {
 		grid-template-columns: minmax(370px, 1fr) 1fr;
@@ -205,7 +203,7 @@
 		margin-left: 5px;
 	}
 }
-/* --- "Connection" block vertical --- */
+/* "Connection" block vertical */
 @media screen and (min-width: 590px) and (max-width: 715px) {
 	.about-me__connection {
 		justify-self: center;
@@ -218,7 +216,7 @@
 		width: auto;
 	}
 }
-/* --- Vertical --- */
+/* Vertical */
 @media screen and (max-width: 590px) {
 	.about-me__content {
 		grid-template-columns: 1fr;
@@ -226,7 +224,7 @@
 	 	grid-auto-flow: row;
 	}	
 }
-/* --- Merit's eliments vertical -- */
+/* Merit's eliments vertical */
 @media screen and (max-width: 430px) {
 	.merits__heading {
 		margin-bottom: 10px;

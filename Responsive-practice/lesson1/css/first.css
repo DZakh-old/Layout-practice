@@ -100,9 +100,7 @@
 	transform: translateX(-10px);
 }
 .nav__item-link:hover:before,
-.nav__item-link:hover:after,
-.nav__item-link:focus:before,
-.nav__item-link:focus:after {
+.nav__item-link:hover:after {
 	opacity: 1;
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
@@ -122,9 +120,9 @@
 }
 
 /*
-* --- OFFER ---
+* --- TITLE ---
 */
-.first__offer {
+.first__title {
 	margin: 0 auto 15px auto;
 }
 
@@ -152,14 +150,12 @@
 	width: 40px;
 	padding-top: 7px;
 	font-size: 18px;
-	border-radius: 50%;	
-
+	border-radius: 50%;
 	box-shadow: 0 0 0 1px rgba(255,255,255,1);
 	overflow: hidden;
 	-webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 	-moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-
 }
 .first__arrow-to-down:before {
 	display: block;
@@ -213,9 +209,12 @@
 	}
 }
 
+
 /*
 * ---MEDIA QUIRES ---
 */
+
+/* Narrow menu */
 @media screen and (max-width: 850px) {
 	.nav__menu {
 		width: 300px;	
@@ -227,6 +226,7 @@
 		margin-left: 2px;
 	}
 }
+/* Remove menu, make navigation vertically and decrease title */
 @media screen and (max-width: 730px) {
 	.nav {
 		-webkit-flex-direction: column;
@@ -257,11 +257,13 @@
 		font-size: 19px;
 	}
 }
+/* Decrease heading */
 @media screen and (max-width: 600px) {
 	.first__heading {
 		font-size: 29px;
 	}
 }
+/* Decrease title */
 @media screen and (max-width: 480px) {
 	.first__heading {
 		letter-spacing: 2px;
@@ -272,6 +274,7 @@
 		margin-top: 10px;
 	}
 }
+/* Decrease heading */
 @media screen and (max-width: 400px) {
 	.first__heading {
 		font-size: 17px;
