@@ -1,0 +1,121 @@
+/*
+* --- SECTION ---
+*/
+.projects {
+	padding-top: 85px;
+}
+
+/*
+* --- PROJECTS LIST ---
+*/
+.projects__list {
+	position: relative;
+	margin-top: 55px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+ 	grid-gap: 20px;
+ 	list-style: none;
+}
+
+/*
+* --- PROJECTS ---
+*/
+.projects__item {
+	height: 0;
+ 	padding-bottom: 100%;
+ 	background: var(--light-green-color) center center no-repeat;
+ 	background-size: cover;
+}
+.projects__item_bg_mountains {
+	background-image: url(../img/projects/mountains.png);
+}
+.projects__item_bg_deer {
+	background-image: url(../img/projects/deer.png);
+}
+.projects__item_bg_house {
+	background-image: url(../img/projects/house.png);
+}
+
+/*
+* --- Hover screen ---
+*/
+.projects__hover-screen {
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%;
+	background: rgba(0, 0, 0, 0.56);
+	opacity: 0;
+	-webkit-transition: opacity 0.7s;
+	-o-transition: opacity 0.7s;
+	transition: opacity 0.7s;
+}
+.projects__hover-screen:hover {
+	opacity: 1;
+}
+
+/*
+* --- Title ---
+*/
+.projects__title {
+	position: absolute;
+	top: calc(50% - 23px);
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+.projects__name {
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.projects__view {
+	font-size: 13px;
+}
+.underline_theme_projects:after {
+	background: white;
+}
+
+
+/*
+* --- MEDIA QUIRES ---
+*/
+
+/* One item aside */
+@media screen and (min-width: 675px) and (max-width: 825px) {
+	.projects__list {
+		grid-template-columns: 300px 1fr;
+	}
+	.projects__item:nth-child(2) {
+		padding-bottom: 620px;
+		grid-row-start: 1;
+		grid-row-end:   3;
+		grid-column-start: 2;
+		grid-column-end:   3;
+	}
+	.projects__item:nth-child(2) > .projects__hover-screen {
+		padding-bottom: 620px;
+	}
+}
+/* One item below */
+@media screen and (min-width: 485px) and (max-width: 675px) {
+	.projects__list {
+		grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+	}
+	.projects__item:nth-child(1) {
+		padding-bottom: calc(50% - 10px);
+		grid-row-start: 2;
+		grid-row-end:   3;
+		grid-column-start: 1;
+		grid-column-end:   3;
+	}
+	.projects__item:nth-child(1) > .projects__hover-screen {
+		padding-bottom: calc(50% - 10px);
+	}
+}
+/* All items vertically */
+@media screen and (max-width: 485px) {
+	.projects__list {
+		grid-template-columns: 1fr;
+	}
+}

@@ -9,9 +9,9 @@
 * --- SKILL LIST ---
 */
 .skills__list {
+	--min-item-list: 200px;
 	margin-top: 63px;
 	display: grid;
-	--min-item-list: 200px;
 	grid-template-columns: repeat(auto-fill, minmax(var(--min-item-list), 1fr));
  	grid-gap: 20px;
  	list-style: none;

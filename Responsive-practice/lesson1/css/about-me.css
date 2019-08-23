@@ -117,7 +117,6 @@
 	margin-bottom: 17px;
 }
 .connection__link {
-	position: relative;
 	color: var(--green-color);
 }
 .underline_theme_connection:after {
