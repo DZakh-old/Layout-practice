@@ -10,9 +10,10 @@
 */
 .skills__list {
 	--min-item-list: 200px;
+	
 	margin-top: 63px;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(var(--min-item-list), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(var(--min-item-list), 1fr));
  	grid-gap: 20px;
  	list-style: none;
 }
