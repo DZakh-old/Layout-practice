@@ -51,14 +51,14 @@
 */
 .nav__logo {
 	display: block;
-	font-size: 17px;
+	font-size: 17rem;
 }
 
 /*
 * --- menu ---
 */
 .nav__menu {
-	font-size: 15px;
+	font-size: 15rem;
 	font-weight: bold;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -109,7 +109,7 @@
 * --- email ---
 */
 .nav__email {
-	font-size: 13px;
+	font-size: 13rem;
 	text-transform: lowercase;
 	position: relative;
 }
@@ -124,12 +124,12 @@
 	margin: 0 auto 15px auto;
 }
 .first__heading {
-	font-size: 49px;
+	font-size: 49rem;
 }
 .first__caption {
 	letter-spacing: 3px;
 	margin-top: 15px;
-	font-size: 29px;
+	font-size: 29rem;
 	font-weight: 100;
 }
 
@@ -145,7 +145,7 @@
 	height: 40px;
 	width: 40px;
 	padding-top: 7px;
-	font-size: 18px;
+	font-size: 18rem;
 	border-radius: 50%;
 	box-shadow: 0 0 0 1px rgba(255,255,255,1);
 	overflow: hidden;
@@ -232,44 +232,44 @@
 		flex-direction: column;	
 	}
 	.nav__logo {
-		font-size: 21px;
+		font-size: 21rem;
 	}
 	.nav__menu {
 		display: none;	
 	}
 	.nav__email {
-		font-size: 11px;
+		font-size: 11rem;
 		font-weight: 100;
 		margin-top: 5px;
 	}
 
 	.first__heading {
-		font-size: 39px;
+		font-size: 39rem;
 	}
 	.first__caption {
-		font-size: 19px;
+		font-size: 19rem;
 	}
 }
 /* Decrease heading */
 @media screen and (max-width: 600px) {
 	.first__heading {
-		font-size: 29px;
+		font-size: 29rem;
 	}
 }
 /* Decrease title */
 @media screen and (max-width: 480px) {
 	.first__heading {
 		letter-spacing: 2px;
-		font-size: 22px;
+		font-size: 22rem;
 	}
 	.first__caption {
-		font-size: 13px;
+		font-size: 13rem;
 		margin-top: 10px;
 	}
 }
 /* Decrease heading */
 @media screen and (max-width: 400px) {
 	.first__heading {
-		font-size: 17px;
+		font-size: 17rem;
 	}
 }

@@ -28,7 +28,7 @@
 	padding-right: 15px;
 }
 .bg-info__text {
-	font-size: 15px;
+	font-size: 15em;
 	margin-bottom: 37px;
 	letter-spacing: 0.5px;
 	line-height: 24px;
@@ -54,7 +54,7 @@
 .merits__number {
 	position: relative;
 	margin: auto;
-	font-size: 20px;
+	font-size: 20em;
 	color: var(--green-color);
 	line-height: 102px;
 	font-weight: 100;
@@ -87,7 +87,7 @@
 	transform: rotate(35deg);
 }
 .merits__name {
-	font-size: 12px;
+	font-size: 12em;
 	text-transform: uppercase;
 	margin-top: 23px;
 }
@@ -100,7 +100,7 @@
 	margin-bottom: 40px;
 }
 .connection__content {
-	font-size: 14px;
+	font-size: 14em;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;

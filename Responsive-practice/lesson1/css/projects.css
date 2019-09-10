@@ -64,13 +64,13 @@
 	color: white;
 }
 .projects__name {
-	font-size: 15px;
+	font-size: 15rem;
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 5px;
 }
 .projects__view {
-	font-size: 13px;
+	font-size: 13rem;
 }
 .underline_theme_projects:after {
 	background: white;
