@@ -31,6 +31,7 @@ a {
 }
 
 
+
 /*
 * _____ PAGE PROPERTIES _____
 */
@@ -98,6 +99,11 @@ a {
 	transform: scale(1.15);
 }
 
+/* themes */
+.underline_theme_masthead:after {
+	background: var(--gray-green-color);
+}
+
 
 
 /*
@@ -107,7 +113,7 @@ a {
 /* --- Section --- */
 .first {
 	height: 100vh;
-	min-height: 400px;
+	min-height: 440px;
 	position: relative;
 }
 .first__background {
@@ -134,7 +140,7 @@ a {
 }
 
 
-/* --- Top panel --- */
+/* --- Masthead --- */
 .masthead {
 	position: absolute;
 	top: 55px;
@@ -148,15 +154,18 @@ a {
 	justify-content: space-between;
 	letter-spacing: 1.5rem;
 }
+.masthead__navigation {
+	margin-left: 25px;
+}
 
-/* logo */
-.masthead__logo {
+/* --- Logo --- */
+.logo {
 	display: block;
 	font-size: 17em;
 }
 
-/* menu */
-.masthead__menu {
+/* --- navigation --- */
+.navigation {
 	font-size: 15em;
 	font-weight: bold;
 	display: -webkit-flex;
@@ -167,52 +176,49 @@ a {
 	justify-content: space-between;
 	list-style: none;
 	width: 340px;
-	margin-left: 25px;
 }
 
-/* item & animation */
-.masthead__item-link {
+/* items & animation */
+.navigation__item-link {
 	position: relative;
 	display: inline-block;
 }
-.masthead__item-link:before,
-.masthead__item-link:after {
+.navigation__item-link:before,
+.navigation__item-link:after {
 	display: inline-block;
 	opacity: 0;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
 	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
 	transition: transform 0.3s, opacity 0.2s;
 }
-.masthead__item-link:before {
-	margin-right: 5px;
+.navigation__item-link:before {
+	margin-right: 0px;
 	content: '[';
 	-webkit-transform: translateX(10px);
 	-moz-transform: translateX(10px);
 	transform: translateX(10px);
 }
-.masthead__item-link:after {
-	margin-left: 5px;
+.navigation__item-link:after {
+	margin-left: 0px;
 	content: ']';
 	-webkit-transform: translateX(-10px);
 	-moz-transform: translateX(-10px);
 	transform: translateX(-10px);
 }
-.masthead__item-link:hover:before,
-.masthead__item-link:hover:after {
+.navigation__item-link:hover:before,
+.navigation__item-link:hover:after {
 	opacity: 1;
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
 	transform: translateX(0px);
 }
 
-/* email */
-.masthead__email {
+
+/* --- Email --- */
+.email {
 	font-size: 13em;
 	text-transform: lowercase;
 	position: relative;
-}
-.underline_theme_masthead:after {
-	background: var(--gray-green-color);
 }
 
 
@@ -261,11 +267,11 @@ a {
 	box-shadow: 0 0 0 8px rgba(255,255,255,0.3);
 }
 .first__arrow-to-down:hover:before {
-	-webkit-animation: toRightFromLeft 0.3s forwards;
-	-moz-animation: toRightFromLeft 0.3s forwards;
-	animation: toRightFromLeft 0.3s forwards;
+	-webkit-animation: fromTopToBottom 0.3s forwards;
+	-moz-animation: fromTopToBottom 0.3s forwards;
+	animation: fromTopToBottom 0.3s forwards;
 }
-@-webkit-keyframes toRightFromLeft {
+@-webkit-keyframes fromTopToBottom {
 	49% {
 		-webkit-transform: translateY(100%);
 	}
@@ -277,7 +283,7 @@ a {
 		opacity: 1;
 	}
 }
-@-moz-keyframes toRightFromLeft {
+@-moz-keyframes fromTopToBottom {
 	49% {
 		-moz-transform: translateY(100%);
 	}
@@ -289,7 +295,7 @@ a {
 		opacity: 1;
 	}
 }
-@keyframes toRightFromLeft {
+@keyframes fromTopToBottom {
 	49% {
 		transform: translateY(100%);
 	}
@@ -305,20 +311,20 @@ a {
 
 /* --- Media quires --- */
 
-/* narrow menu */
-@media screen and (max-width: 850px) {
-	.masthead__menu {
-		width: 300px;	
+/* narrow navigation */
+@media screen and (max-width: 875px) {
+	.navigation {
+		width: 320px;	
 	}
-	.masthead__item-link:before {
-		margin-right: 2px;
-	}
-	.masthead__item-link:after {
+	.navigation__item-link:before {
 		margin-left: 2px;
+	}
+	.navigation__item-link:after {
+		margin-right: 2px;
 	}
 }
 
-/* make mastheadigation vertically, remove menu and decrease title */
+/* make masthead vertically, remove navigation and decrease title */
 @media screen and (max-width: 730px) {
 	.masthead {
 		-webkit-flex-direction: column;
@@ -327,13 +333,13 @@ a {
 		-o-flex-direction: column;
 		flex-direction: column;	
 	}
-	.masthead__logo {
-		font-size: 20em;
-	}
-	.masthead__menu {
+	.masthead__navigation {
 		display: none;	
 	}
-	.masthead__email {
+	.logo {
+		font-size: 20em;
+	}
+	.email {
 		font-size: 11em;
 		font-weight: 100;
 		margin-top: 5px;
