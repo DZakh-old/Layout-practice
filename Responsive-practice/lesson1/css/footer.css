@@ -1,0 +1,17 @@
+/*
+* --- SECTION ---
+*/
+.footer {
+	padding-top: 125px;
+	padding-bottom: 110px;
+}
+
+/*
+* --- TEXT ---
+*/
+.footer__text {
+	color: var(--gray-color);
+	font-size: 11rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;	
+}
