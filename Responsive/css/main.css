@@ -119,7 +119,9 @@ a {
 .underline_color_references:after {
 	background: var(--light-green-color);
 }
-
+.underline_color_projects:after {
+	background: white;
+}
 
 
 /*
@@ -128,7 +130,8 @@ a {
 
 /* --- Section --- */
 .first {
-	height: 100vh;
+	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
 	min-height: 440px;
 	position: relative;
 }

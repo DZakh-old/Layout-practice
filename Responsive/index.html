@@ -5,7 +5,11 @@
 	<meta charset="UTF-8">
 	<title>Responsive practice</title>
 	<link rel="icon" href="img/site-icon.ico">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="fonts/stylesheet.css?v=1.0">
+	<link rel="stylesheet" href="css/main.css?v=1.1">
+	<link rel="stylesheet" href="css/skills.css?v=0.1">
+	<link rel="stylesheet" href="css/projects.css?v=0.1">
+	<link rel="stylesheet" href="css/footer.css?v=0.1">
 </head>
 <body class="page">
 	<section class="first">
@@ -13,7 +17,7 @@
 		<div class="container first__inner">
 			<header class="masthead">
 				<a href="#" class="logo">
-					My<strong>portfolio</strong>
+					My<b>portfolio</b>
 				</a>
 				<nav>
 					<ul class="navigation masthead__navigation">
@@ -230,5 +234,27 @@
 			</p>
 		</div>
 	</footer>
+
+	<script>
+		// Only for mobile
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { 
+			correctSizing();
+			// Listen to the resize event
+			window.addEventListener('orientationchange', function() {
+			    // After orientationchange, add a one-time resize event
+			    var afterOrientationChange = function() {
+			        // YOUR POST-ORIENTATION CODE HERE
+					correctSizing();
+			        // Remove the resize event listener after it has executed
+			        window.removeEventListener('resize', afterOrientationChange);
+			    };
+			    window.addEventListener('resize', afterOrientationChange);
+			});
+			function correctSizing() {
+				let vh = window.innerHeight * 0.01;
+				document.documentElement.style.setProperty('--vh', `${vh}px`);
+			}
+		}
+	</script>
 </body>
 </html>
