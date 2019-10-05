@@ -10,6 +10,7 @@
   "author": "Dmitry Zakh <dzakh.dev@gmail.com> (https://dzakh.dev/)",
   "license": "MIT",
   "dependencies": {
+    "lazysizes": "^5.1.2",
     "normalize.css": "^8.0.1"
   }
 }
