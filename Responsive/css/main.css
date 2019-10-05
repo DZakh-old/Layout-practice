@@ -2,7 +2,7 @@
 	--dark-green-color: #22241b;
 	--green-color: #204d15;
 	--gray-green-color: #696d68;
-	--gray-color: #888886;
+	--gray-color: #777770;
 	--light-green-color: #becbbb;
 }
 
@@ -130,7 +130,8 @@ a, button {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-.underline:hover::after {
+.underline:hover::after,
+.underline:focus::after {
 	-webkit-transform: scale(1.15);
 	-moz-transform: scale(1.15);
 	transform: scale(1.15);
@@ -251,7 +252,9 @@ a, button {
 	transform: translateX(-10px);
 }
 .navigation__item-link:hover::before,
-.navigation__item-link:hover::after {
+.navigation__item-link:hover::after,
+.navigation__item-link:focus::before,
+.navigation__item-link:focus::after {
 	opacity: 1;
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
@@ -305,12 +308,14 @@ a, button {
 }
 
 /* Hover animation */
-.first__arrow-to-down:hover {
-	background: rgba(255,255,255,1);
+.first__arrow-to-down:hover,
+.first__arrow-to-down:focus {
+	background: white;
 	color: var(--green-color);
 	box-shadow: 0 0 0 8px rgba(255,255,255,0.3);
 }
-.first__arrow-to-down:hover::before {
+.first__arrow-to-down:hover::before,
+.first__arrow-to-down:focus::before {
 	-webkit-animation: fromTopToBottom 0.3s forwards;
 	-moz-animation: fromTopToBottom 0.3s forwards;
 	animation: fromTopToBottom 0.3s forwards;
@@ -838,7 +843,8 @@ a, button {
 	-o-transition: opacity 0.7s;
 	transition: opacity 0.7s;
 }
-.projects__hover-screen:hover {
+.projects__hover-screen:hover,
+.projects__hover-screen:focus {
 	opacity: 1;
 }
 
